@@ -9,8 +9,11 @@ If notes are stored within a bibtex file's "annote" field using the format in
 contained in the fields. 
 
 
-`bib_to_questions.py` takes in the location of a .bib file and returns all the
-questions from the article notes matching that tag.
+- `bib_to_questions.py` takes in the location of a .bib file and returns all the
+  questions from the article notes matching that tag.
+- `tag_to_cards.py` takes in the location of a .bib file and a tag and makes
+  [Anki](https://apps.ankiweb.net/) flash cards for going from a citation to
+  the one sentence summary or vice-versa
 
 ## Example usage
 
@@ -26,4 +29,8 @@ Found 15 entries for the tag 'Civil War'.
 ...
 ```
 
-
+```
+ahalterman:general_examiner$ python tag_to_cards.py -i /Users/ahalterman/MIT/MIT.bib -t "Civil War"
+Extracting bibliographic entries from /Users/ahalterman/MIT/MIT.bib
+Wrote deck to Civil War_cite_to_sum.apkg
+```

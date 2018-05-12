@@ -1,7 +1,6 @@
 import bibtexparser
 from collections import Counter
 import re
-import genanki
 import plac
 
 @plac.annotations(
